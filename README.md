@@ -1,1 +1,1 @@
-Event management system# softwaredevlab
+Event management system
