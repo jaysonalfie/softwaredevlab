@@ -1,0 +1,178 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         
+         <title>Event Management Access</title>
+         <script src="https://kit.fontawesome.com/899db33f25.js" crossorigin="anonymous"></script>
+ 
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="http://127.0.0.1:5000/static/css/style2.css">
+         
+         <link rel="stylesheet" href="http://127.0.0.1:5000/static/css/bootstrap.css"/>
+         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/font-awesome-line-awesome/css/all.min.css" integrity="sha512-dC0G5HMA6hLr/E1TM623RN6qK+sL8sz5vB+Uc68J7cBon68bMfKcvbkg6OqlfGHo1nMmcCxO5AinnRTDhWbWsA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <div class="app_wrapper">
+            <div class="sidebar">
+                <div class ="profile">
+                    <div class="top flex">
+                      <img src=" http://127.0.0.1:5000/static/man.jpg" alt="">
+                       <span> Jayson Alfie </span>
+                    </div>
+                </div>
+                <div class="center">
+                    <ul>
+                        <a href ="http://127.0.0.1:5000/dashboard" class="link flex">
+                            <i class="fa-solid fa-house-user" style="color: #000002;"></i>
+                            <span>Dashboard</span>
+                        </a>  
+                        <a href ="http://127.0.0.1:5000/events" class="link flex">
+                            <i class="fa-solid fa-calendar-days" style="color: #000002;"></i>
+                            <span>Events</span>
+                        </a>
+                        <a href ="http://127.0.0.1:5000/notifications" class="link flex">
+                            <i class="fa-solid fa-bell" style="color: #000002;"></i>
+                            <span>Notifications</span>
+                        </a>
+                        <a href ="" class="link flex">
+                            <i class="fa-regular fa-calendar-days" style="color: #000002;"></i>
+                            <span>Calendar</span>
+                        </a>
+                            
+                    </ul>
+                    
+
+                </div>
+                <div class="bottom">
+                    <a href ="" class="link flex">
+                    <i class="fa-solid fa-arrow-right-from-bracket" style="color: #000002;"></i>
+                    <span>Log out</span>
+                    </a>     
+                </div>
+
+            </div> 
+
+            <div class="main_content">
+                <div class="left">
+                    <div class="event_content">
+                        <div class="head">
+                            <i class="fa-solid fa-circle-plus" style="color: #000002;"></i>
+                            <span>CREATE EVENT</span>
+                        </div>
+                        <div class="event_creation">
+                           <h6>EVENT NAME</h6>
+                           <span></span>
+                        </div>
+                        <div class="event_creation">
+                            <h6>EVENT ID</h6>
+                            <span></span>
+                         </div>
+                         <div class="event_creation">
+                            <h6>DATE</h6>
+                            <span></span>
+                         </div>
+                         <div class="event_creation">
+                            <h6>TIME</h6> 
+                            <span></span>
+                         </div>
+                    </div>
+
+                    <div class="event_view">
+                       <div class="head">
+                          <i class="fa-solid fa-box-archive" style="color: #000002;"></i>
+                          <span>VIEW EVENT</span>
+                         </div>
+
+                       <div class="upcoming flex">
+                         <img src="http://127.0.0.1:5000/static/comic.jpg" alt="">
+                          <span>SAN DIEGO COMIC CON<br> 11th October 2023<br> 11.00 a.m</span>
+                       </div>
+                       
+                       <div class="upcoming flex">
+                         <img src="http://127.0.0.1:5000/static/costume.jpg" alt="">
+                          <span>EVEREST COSTUME PARTY<br> 31st October 2023<br> 9.00 p.m</span>
+                       </div>        
+
+                    </div>
+
+                </div>
+
+
+                <div class="right">
+                    <div class="update">
+
+                        <div class="head">
+                            <i class="fa-solid fa-folder" style="color: #000002;"></i>
+                            <span>UPDATE EVENT</span> 
+                        </div>
+
+                        <div class="update_content">
+                            <h6 style="color:white;">EVENT ID</h6>
+                            <span></span>
+                        </div>
+
+                        <div class="update_content">
+                            <h6 style="color:white;">DESCRIPTION</h6>
+                            <span></span>
+
+                             
+                         </div>
+
+                             <div class="middle">
+                                <button class="btn btn-danger b2">Update</button>
+                              </div>  
+
+                           <div class="mid">
+                           
+                            <h5>OTHER OPTIONS</h5>
+                         </div>
+
+
+                         <div class="bottom_buttons">
+                            <div class="update_buttons ">
+                                <button  class="btn btn-danger" >
+                                    <i class="fa-solid fa-ban" style="color: #000002;"></i>
+                                    <span style="color:white;">CANCEL EVENT</span>
+                                </button> 
+                                
+                            </div>
+
+                            <div class="update_buttons">
+                                <button  class="btn btn-danger b2 ">
+                                    <i class="fa-solid fa-trash" style="color: #000002;"></i>
+                                    <span style="color:white;">DELETE EVENT</span>
+                                </button> 
+                            </div>
+
+
+
+                         </div>
+                         
+
+                          
+
+                          
+                                
+
+                           
+
+
+
+                    </div>
+
+                 </div>
+
+                 
+            </div>
+        </div>
+
+
+    </body>
+
+</html>
+    
