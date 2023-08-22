@@ -129,3 +129,9 @@
         border-radius: 50%;
         margin: 0.6rem;
     }
+    
+    .wrapper .Iagree {
+        display: flex;
+        font-size: 16px;
+        justify-content: space-between;
+    }
