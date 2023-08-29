@@ -1,7 +1,24 @@
-from flask import Flask, render_template
+from flask import Flask, render_template #using template
+
 
 #creating a flask app
 app = Flask(__name__)
+
+#creating event list that will be passed to calendar
+# EVENTS = [
+    
+#     {
+#        'title' :'Arcane Dinner Event',
+#        'start' :'2023-08-29',
+#     },
+#     {
+#        'title' :'Synergy concert',
+#        'start' :'2023-08-31',
+#     }
+    
+# ]
+
+
 
 #registering route to application
 @app.route("/")
@@ -27,6 +44,15 @@ def login():
 @app.route("/signup")
 def signup():
     return render_template('signup.html') 
+
+
+@app.route("/calendar")
+def calendar():
+    return render_template('calendar.html') 
+    
+# @app.route("/api/events")
+# def list_events():
+#     return jsonify(EVENTS)    
                         
 
 
