@@ -168,6 +168,9 @@
         border-radius: 0.5rem;
         background-color: #500416;
     }
+    .event_creation{
+        margin-bottom: 1rem;
+    }
     
     .event_view {
         display: flex;
@@ -190,8 +193,11 @@
         gap: 0.6rem;
         margin: 0.4rem;
         margin-top: 2.0rem;
-        width: 310px;
+        width: 420px;
         margin-left: 2.6rem;
+    }
+    .update_content{
+        margin-bottom: 1.1rem;
     }
     
     .bottom_buttons {
@@ -250,3 +256,11 @@
     .b1 {
         margin-top: 1.6rem;
     }
+    form{
+        position: relative;
+        padding: 0 40px;
+        box-sizing: border-box;
+
+    }
+    
+    

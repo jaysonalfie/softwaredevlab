@@ -64,22 +64,31 @@
                             <i class="fa-solid fa-circle-plus" style="color: #000002;"></i>
                             <span>CREATE EVENT</span>
                         </div>
-                        <div class="event_creation">
-                           <h6>EVENT NAME</h6>
-                           <span></span>
-                        </div>
-                        <div class="event_creation">
-                            <h6>EVENT ID</h6>
-                            <span></span>
-                         </div>
-                         <div class="event_creation">
-                            <h6>DATE</h6>
-                            <span></span>
-                         </div>
-                         <div class="event_creation">
-                            <h6>TIME</h6> 
-                            <span></span>
-                         </div>
+                        
+                        <form method="post">
+                            <div class="event_creation">
+                               <label>EVENT NAME</label>
+                               <span></span>
+                               <input type="text" required>
+                            </div>
+                            <div class="event_creation">
+                                <label>EVENT ID</label>
+                                <span></span>
+                                <input type="text" required>
+                             </div>
+                             <div class="event_creation">
+                                <label>DATE</label>
+                                <span></span>
+                                <input type="date" required>
+                             </div>
+                             <div class="event_creation">
+                                <label>TIME</label>
+                                <span></span>
+                                <input type="time" required>
+                             </div>
+
+                             <button class="btn btn-danger b2" type="submit">Submit</button>
+                           </form>   
                     </div>
 
                     <div class="event_view">
@@ -111,21 +120,23 @@
                             <span>UPDATE EVENT</span> 
                         </div>
 
-                        <div class="update_content">
-                            <h6 style="color:white;">EVENT ID</h6>
-                            <span></span>
-                        </div>
-
-                        <div class="update_content">
-                            <h6 style="color:white;">DESCRIPTION</h6>
-                            <span></span>
-
-                             
-                         </div>
-
-                             <div class="middle">
-                                <button class="btn btn-danger b2">Update</button>
-                              </div>  
+                          <form method ="post">
+                            <div class="update_content">
+                                <label>EVENT ID</label>
+                               <span></span>
+                               <input type="text" required>
+                            </div>
+    
+                            <div class="update_content">
+                                <label>DESCRIPTION</label>
+                                <span></span>
+                                <input type="text" required>
+                            </div>
+    
+                                 <div class="middle">
+                                    <button class="btn btn-danger b2">Update</button>
+                                  </div>  
+                          </form>
 
                            <div class="mid">
                            
