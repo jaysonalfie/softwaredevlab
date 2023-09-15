@@ -21,19 +21,19 @@
         <div class="wrapper">
           <img  id ="logo" src = "http://127.0.0.1:5000/static/Logo.jpg">
             <h1>Create your account<h1>
-                <form method="post">
+                <form  id="signupForm" method="post">
                   <div class="text">
                     <input type="text" required>
                     <span></span>
                     <label>Name</label>
                   </div>
                   <div class="text">
-                    <input type="text" required>
+                    <input id="email" type="text" required>
                     <span></span>
-                    <label>email</label>
+                    <label >email</label>
                   </div>
                   <div class="text">
-                    <input type="password" required>
+                    <input id="password"type="password" required>
                     <label>password</label>
                   </div>
 
@@ -52,6 +52,6 @@
                 </form>
         </div>
 
-
+        <script src="http://127.0.0.1:5000/static/js/script.js"></script>
     </body>
 </html>
