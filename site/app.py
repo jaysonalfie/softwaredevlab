@@ -1,6 +1,9 @@
 from flask import Flask, render_template,request, session,redirect, url_for,jsonify #using template
 import secrets
 import json
+import mysql.connector
+import bcrypt
+
 
 
 
@@ -9,6 +12,14 @@ app = Flask(__name__)
 app.secret_key =secrets.token_hex(16) # Change this to a secure random key
 
 # Dummy user data (replace with your database queries)
+
+# Connecting to DB
+
+cnx = mysql.connector.connect(user='root', password='',
+                              host='127.0.0.1',
+                              database='eveman')
+
+
 users = {
     'jayson@gmail.com': {'password': 'jayson102', 'id': 1},
 }
@@ -82,20 +93,47 @@ def login():
     
     
 
-@app.route("/signup")
+@app.route("/signup",methods=['GET', 'POST'])
 def signup():
-    # user_data = request.get_json()
+   if request.method == "POST":
+     try:
+        cnx = mysql.connector.connect(user='root', password='',
+                              host='127.0.0.1',
+                              database='eveman')
+        cursor = cnx.cursor()
+         # Parse JSON data from the request body
+        data = request.json
 
-    # Validate user data (e.g., check if email is unique)
-    
-    # Save user data to a JSON or text file 
-    # with open('user_data.json', 'a') as file:
-    #     file.write(json.dumps(user_data) + '\n')
+        # Extract values from the JSON data
+        Name = data.get('Name')
+        Email = data.get('Email')
+        Password = data.get('Password')
+        # Password Hashing
+        
+  
+        # converting password to array of bytes
+        pbytes = Password.encode('utf-8')
+        
+        # generating the salt
+        psalt = bcrypt.gensalt()
+        
+        # Hashing the password
+        phash = bcrypt.hashpw(pbytes, psalt)
+        # Define the SQL INSERT statement
+        sql = "INSERT INTO users (Name, Email, Password) VALUES (%s, %s, %s)"
 
-    # # Return a success response to the client
-    # return jsonify({'success': True})
-    
-    return render_template('signup.html') 
+        # Execute the SQL statement with data
+        cursor.execute(sql, (Name, Email, phash))
+
+        # Commit the transaction to save the changes
+        cnx.commit()
+
+        return jsonify({"message": "Created Account successfully"})
+
+     except Exception as e:
+        return jsonify({"error": str(e)}), 500
+     return "Signup Successfull"
+   return render_template('signup.html') 
 
 
 @app.route("/calendar")
@@ -105,7 +143,8 @@ def calendar():
 # @app.route("/api/events")
 # def list_events():
 #     return jsonify(EVENTS)    
-                        
+
+cnx.close()                   
 
 
 if __name__ == "__main__":
